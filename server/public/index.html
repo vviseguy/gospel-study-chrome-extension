@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Book of Mormon Project - Cross Reference Assist</title>
+  <link rel="icon" type="image/x-icon" href=".\icon_80.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <main style="margin:5%;margin-top: 5px;">
+    <h1><img src=".\icon_80.png" alt="An image of the extension suggesting cross references." width="36" height="36" style="vertical-align: text-bottom"> Hello there!</h1>
+    <p>For my project, I made a Google Chrome extention for cross referencing scriptures in the standard works.</p>
+    <div class="carousel">
+      <div class="carousel-images" onload="showSlide(1);">
+        <img src=".\Screenshot 2023-12-12 025131.png" alt="An image of the extension suggesting cross references." height="500px;">
+        <img src=".\Screenshot 2023-12-12 045204.png" alt="An image of the extension suggesting cross references." height="500px;">
+        <img src=".\Screenshot 2023-12-12 115217.png" alt="An image of the extension suggesting cross references." height="500px;">
+  
+        <!-- Add more images with respective src and alt attributes -->
+      </div>
+      <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+     <h1>How To Use</h1>
+    <ol>
+    <li>Download the extension.</li>
+    <li>Pin the extension by right clicking the "puzzle piece" in the top right corner of your browser and selecting the "pin" icon next to the "Cross Reference Assist" Extension.</li>
+    <li>Navigate to churchofJesusChrist.org and find your favorite scripture.</li>
+    <li>Highlight a portion you would like to cross reference.</li>
+    <li>Click the&nbsp;"Cross Reference Assist" Extension icon that now appears next to the "puzzle piece" icon in the top right corner of your browser.</li>
+    <li>Wait 30 seconds to a minute. Your results will appear as an "alert" pop-up.</li>
+    </ol>
+    <p>Sometimes chat will provide more information than can fit in this alert box. I'm sorry if it gets cut off. If you really want, come find me and I can get the rest of your response from the server logs.</p>
+    <h1>Disclaiemer</h1>
+    <p>Chat isnt congiscient of what it is doing and is just mixing things together that "sound right". So! Please use it as a tool for promting cross references. It is built to not give any interpretation, but sometimes it insinuates stuff. What it says isnt doctine. I know you know that, but I need to make sure that huge disclaimer is obvious, its a fallible bot trained by people who are not incentiviezed to prioritize that this bot actually understand the gospel.</p>
+    <h1>Add the extension:</h1>
+    <p>The best version so far should be up on the Chrome Store soon. Check 
+      <a title="Add the &quot;Cross Reference Assist&quot; Chrome Extension" href="https://chromewebstore.google.com/detail/oilpehoghdgommfphnnkjfdmnkkiegdg/preview?hl=en">here</a>
+      or 
+      <a title="Add the &quot;Cross Reference Assist&quot; Chrome Extension" href="https://chromewebstore.google.com/detail/oilpehoghdgommfphnnkjfdmnkkiegdg/">here</a>.</p>
+    <h2>Figure it out manually:</h2>
+    <p>For the devs out there, you can also manually download an old version:</p>
+    <ol>
+      <li><a href="https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked">Instructions</a></li>
+      <li><a href="https://drive.google.com/file/d/14OZ9w_6w6Lhf3b0pCA4hw_Ol4dE5WlAB/view?usp=sharing">Download link</a></li>
+    </ol>
+    <h1>Debugging info:</h1>
+    <p>The server is new, and ChatGPT is kinda slow - remmeber how long it takes to log a response normally.<br /><br />If you want a more direct way you can cross reference stuff directly with a demo version below:</p>
+      <form id="redirectForm" onsubmit="return false;">
+        <label for="textInput">Enter Scriptural Text:</label>
+        <input type="text" id="textInput">
+        <button onclick="redirectToURL()">Go</button>
+      </form>
+
+      <script>
+        function redirectToURL() {
+            var userInput = document.getElementById('textInput').value;
+            if (userInput.trim() !== '') {
+                var url = 'https://bomproj.vviseguy.click/ask/d/' + encodeURIComponent(userInput);
+                window.open(url, '_blank');
+            } else {
+                alert('Please enter some text.');
+            }
+        }
+
+        let slideIndex = 0;
+const slides = document.querySelectorAll('.carousel-images img');
+
+function showSlide(n) {
+  slideIndex += n;
+
+  if (slideIndex > slides.length - 1) {
+    slideIndex = 0;
+  } else if (slideIndex < 0) {
+    slideIndex = slides.length - 1;
+  }
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = 'none';
+  }
+
+  slides[slideIndex].style.display = 'block';
+}
+
+function moveSlide(n) {
+  showSlide(n);
+}
+
+// Automatic slide change every 3 seconds (adjust as needed)
+setInterval(() => {
+  showSlide(1);
+}, 8000);
+showSlide(1);
+
+      </script>
+     <h1>Privacy Policy (Just for you google ;P)</h1>
+     <p>Right now, all Highlight texts sent through the server to ChatGPT are being stored for debugging purposes. It is solely for debugging and improving this product, and there will not be any commercial use of it. No other information is stored. Any emperically stored data, if retrieved will not be used for commercial purposes, or beyond the scope of improving this product. </p>
+     <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>Thanks! Let me know if you have any questions!<br />jacode.wise@gmail.com</p>
+    
+  
+</body>
+
+</html>
