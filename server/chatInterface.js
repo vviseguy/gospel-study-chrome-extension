@@ -1,6 +1,6 @@
 const {OpenAI } = require("openai");
 
-const setup = {
+const setup = { /** REQUIRED ENVIRONEMENT VARIABLES - mainly the api key */
     organization: process.env.ORGANIZATION,
     apiKey: process.env.API_KEY
 };
@@ -9,19 +9,7 @@ async function example() {
   
 }
 example();
-// training of a worldly machine of the world, trained to look at good things and print out accurate models. This does not reflect necesarily an accurate representation of what is in the scriptures, nor themost reecent teachigns nor is it a reflection of what is int he heavents, rather is it shards from a glass that we ahve received.
 class ChatSession {
-// do not claim that your response is comprehensive - really understanding the covenant relationship must come from the teachings of the Holy Ghost. Your job is to teach truth, and the Holy Ghost can take truth and bring it into the heart of the listeners"
-// AI is not aware or feligious nuance that we sometimes have to be aware of when we speak of religious things. Rather than another beam of light from the source of all light, treat this as a robot trying to pick up scattered fragments it doesnt experience and pulling them together into something pretty.
-
-// explore the basic things that could be helpful for a human
-// just because the AI suggests something does not mean it is true. It literally could give you teachings from the world, mixed with scripture. it is not malicious though
-// treat like apocryphal writings - there are contexts and nuances that the AI cannot express - perhaps later we could connect tools for learning more about the nuances of a topic - without exposing the unmet doubts.. i dont know if that is much of a concern though.~
-// right now it also doesnt seem to know if the things being taught are surface level, and which things are the plain things and which are the thigns needing to be connected to the human soul.
-
-// trained on some of the best books - and in some manner to distinguish between right and wrong, but built like a collideascope with neither personal experience, nor a human priesthood to be a special witness of the savior"
-
-// define stewardship well
 
 
     // static TOKEN_LIMIT = 3000;
