@@ -1,7 +1,11 @@
 {
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.18.2",
-    "openai": "^4.20.1"
-  }
+    "name":"chatapult",
+    "version":"0.1",
+    "main": "index.js",
+    "dependencies": {
+      "cors": "^2.8.5",
+      "express": "^4.18.2",
+      "openai": "^4.20.1"
+     },
+     "license":"Pls dont use unless I give permission. CC-BY-1.0"
 }

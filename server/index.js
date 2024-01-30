@@ -12,7 +12,7 @@ const cors = require('cors')
 const app = express();
 printHeader("\nLoading...");
 
-const authCookieName = 'token';
+
 
 
 // The service port. In production the front-end code is statically hosted by the service on the same port.

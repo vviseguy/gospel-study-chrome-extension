@@ -2,7 +2,7 @@ const {OpenAI} = require("openai");
 
 const setup = { /** REQUIRED ENVIRONEMENT VARIABLES - mainly the api key */
     organization: process.env.ORGANIZATION,
-    apiKey: process.env.API_KEY
+    apiKey: process.env.GPT_API_KEY
 };
 const fs = require('node:fs/promises');
 
@@ -96,7 +96,7 @@ class ChatSession {
     }
     
     async retrievePersona(){
-        let rtrn = await fs.readFile('personality.chat', { encoding: 'utf8' });
+        let rtrn = await fs.readFile('./personality.chat', { encoding: 'utf8' });
         const rgx = /^v(?:ersion)?:? *(.+)/i;
         if (rtrn.match(rgx)){
             console.log("Personality version: " + rtrn.match(rgx)[1]);
@@ -127,7 +127,7 @@ class ChatSession {
                 
             }
         }; 
-        console.log("Loaded: " + data[0]);
+        console.log("GPT Model: " + data[0]);
         return data[0];
         
     }
