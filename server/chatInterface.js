@@ -120,7 +120,7 @@ class ChatSession {
         data = data.split("\n");
         data = data.map(element => element.trim());
         data.push(VERSION_OPTIONS[0]);
-        while(true/**!(VERSION_OPTIONS.includes(data[0]))**/){
+        while(!(VERSION_OPTIONS.includes(data[0]))){
             console.log("Discarded unrecognized model: " + data.pop());
             if (data.length == 0) {
                 console.log("Could not find recognizable version from source file, using default version: "+DEFAULT_VERSION);
