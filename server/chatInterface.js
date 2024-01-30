@@ -1,14 +1,11 @@
-const {OpenAI } = require("openai");
+const {OpenAI} = require("openai");
 
 const setup = { /** REQUIRED ENVIRONEMENT VARIABLES - mainly the api key */
     organization: process.env.ORGANIZATION,
     apiKey: process.env.API_KEY
 };
 const fs = require('node:fs/promises');
-async function example() {
-  
-}
-example();
+
 class ChatSession {
 
 
